@@ -1,0 +1,108 @@
+/* CSS declarations go here */
+h1 {
+	text-align: center;
+	color: white;
+}
+
+#input {
+	text-align: center;
+}
+
+#login {
+	text-align: center;
+}
+
+.vent {
+	display: inline-block;
+	
+	font-size: 14px;
+}
+
+h4 {
+	color: #154D85;
+}
+
+h2 {
+	color: purple;
+}
+
+#xee {
+	display: block;
+	font-size: 14px;
+	
+}
+
+#wilfred {
+	display: inline-block;
+	font-size: 18px;
+}
+
+#wee {
+	display: block;
+}
+
+button {
+	background-color: red;
+	color: white; 
+}
+
+.summaryTomorrow {
+
+	display: block;
+	height: 200px;
+	width: 800px;
+	
+}
+
+#temperate {
+	text-align: center;
+	margin-left: 50%;
+	margin-top: 100%;
+}
+
+.temperateMin {
+	display: block;
+	color: blue;
+	font-size: 19px;
+}
+
+.temperateMax {
+	display: block;
+	color: blue;
+	font-size: 19px;
+}
+
+.humidity {
+	font-size: 19px;
+	display: block;
+	color: blue;
+}
+
+.icone {
+	font-size: 26px;
+	display: block;
+	border-radius: 10px;
+	position: absolute;
+	width: 200px;
+	text-align: center;
+	border-style: outset;
+}
+
+#ggg {
+	font-size: 22px;
+	display: block;
+	border-style: inset;
+	border-radius: 10px;
+	text-align: center;
+}
+
+#windflag {
+	height: 50px;
+	width: 50px;
+}
+
+#thermo {
+	
+	height: 60px;
+	width: 60px;
+}

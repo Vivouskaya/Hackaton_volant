@@ -1,0 +1,190 @@
+<head>
+
+  <title>WindOfChange</title>
+ 
+</head>
+
+<body>
+ 
+  {{> header}}
+  <hr>
+  <div id="login">
+    {{> loginButtons}}
+  </div>
+  <hr>
+  <div class="inner">
+    {{> newSpot}}
+  </div>
+  <div class="container">
+    
+    {{> spotsList}}
+    {{> Map}}
+  </div>
+
+  <div>
+    
+  </div>
+
+</body>
+
+<template name="header">
+  
+  <h1> WindOfChange </h1>
+  
+</template>
+
+<template name="Map">
+
+<div id="map-canvas" style="float:right;height:220px;width:45%"></div>
+
+
+</template>
+
+<template name="spotsList">
+  
+ 
+    <div class="container">
+      {{#each spots}}
+        <div class="col-md-12">
+          
+            <div class="well">
+
+              <div class="col-md-4"> 
+              <button id="delete"><strong>X</strong></button>       
+                        <strong>
+                          <h3> <h2>{{address}}</h2>
+                             
+                              <h4>Latitude:</h4>
+                              <span id="xee">
+                                {{lat}}
+                              </span>
+                            
+                            
+                              <h4>Longitude:</h4>
+                              <span id="xee">
+                                {{lon}}
+                              </span>
+                            
+                          </h3>
+                        </strong>  
+              </div>
+              <div class="summaryTomorrow">
+                        <div class="col-md-5"> 
+                          <div id="ggg">
+                                                     
+                                <p>
+                                  <strong>
+                                  Prévisions pour demain:
+                                  </strong>
+                                </p>
+                                {{summaryTomorrow}}
+                          
+                          </div>
+                        </div>
+                        <div class="col-md-2"> 
+                        <div class="icone">
+                        <span class="wee" style="color:{{getIconColor iconSummaryTomorrow}}">
+                        <strong>
+                          
+                            {{iconSummaryTomorrow}}
+                            
+                        </strong>
+                      </span>
+                        </div>       
+                        <div id="temperate">
+                          T°min:        
+                          <div class="temperateMin">
+                            <strong>                          
+                              {{temperatureMinTomorrowC}}°C
+                              </strong>
+                          </div>
+                          T°max:
+                          <div class="temperateMax">
+                            <strong>                                           
+                            {{temperatureMaxTomorrowC}}°C
+                            </strong>
+                          </div>
+                          Humidity:
+                          <div class="humidity">
+                            <strong>
+                              {{humidityTomorrow}}%
+                            </strong>
+                          </div>
+                        </div>                      
+              </div>          
+              </div>
+                      
+              
+              <div class="row"> 
+                  <strong>
+                   <div class="col-md-12">     
+                    <div class="vent"> 
+                        <img id="windflag" src="/img/windflag.png" />
+                              <strong>Today:</strong>
+                              <span class="wee" style="color:{{getStatusColor windSpeedEntier1}}">
+                                  <span id="wilfred">
+                                    {{windSpeedEntier1}} km/h
+                                  </span>
+                              </span>
+                              <strong>Tomorrow:</strong>
+                              <span class="wee" style="color:{{getStatusColor windSpeedEntier2}}">
+                                  <span id="wilfred">
+                                    {{windSpeedEntier2}} km/h
+                                  </span>
+                              </span>
+                              <strong>J+2 :</strong>
+                              <span class="wee" style="color:{{getStatusColor windSpeedEntier3}}">
+                               <span id="wilfred">
+                                {{windSpeedEntier3}} km/h
+                              </span>
+                              </span>
+                              <strong>J+3 :</strong>
+                              <span class="wee" style="color:{{getStatusColor windSpeedEntier4}}">
+                               <span id="wilfred">
+                                {{windSpeedEntier4}} km/h
+                              </span>
+                              </span>
+                              <strong>J+4 :</strong>
+                              <span class="wee" style="color:{{getStatusColor windSpeedEntier5}}">
+                               <span id="wilfred">
+                                {{windSpeedEntier5}} km/h
+                              </span>
+                              </span>
+                              <strong>J+5 :</strong>
+                              <span class="wee" style="color:{{getStatusColor windSpeedEntier6}}">
+                               <span id="wilfred">
+                                {{windSpeedEntier6}} km/h
+                              </span>
+                              </span>
+                              <strong>J+6 :</strong>
+                              <span class="wee" style="color:{{getStatusColor windSpeedEntier7}}">
+                               <span id="wilfred">
+                                {{windSpeedEntier7}} km/h
+                               </span>
+                              </span>
+                    </div> 
+                   </div> 
+                  </strong>
+              </div>
+            </div>
+
+
+        </div>
+      {{/each}}
+          
+    </div>
+        
+
+</template>
+
+<template name="newSpot">
+    {{#if currentUser}}
+    <div id="input" class="well">
+
+        <strong>Add a Spot:</strong>
+        <input type="text" name="address" id="newAddress" />
+        <input type="submit" id="send" class="btn btn-success" value="Add" />
+
+    </div>
+    {{/if}}
+</template>
